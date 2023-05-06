@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80C8F4E2A0656EA008FF402 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */; };
+		F80C8F4F2A0656EA008FF402 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4C2A0656EA008FF402 /* APISession.swift */; };
+		F80C8F502A0656EA008FF402 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4D2A0656EA008FF402 /* APIRequest.swift */; };
 		F87FBEBB2A06508B009B1A8F /* LoginSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */; };
 		F87FBEBD2A06508B009B1A8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87FBEBC2A06508B009B1A8F /* ContentView.swift */; };
 		F87FBEBF2A06508C009B1A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87FBEBE2A06508C009B1A8F /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		F80C8F4C2A0656EA008FF402 /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		F80C8F4D2A0656EA008FF402 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F87FBEB72A06508B009B1A8F /* LoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSampleApp.swift; sourceTree = "<group>"; };
 		F87FBEBC2A06508B009B1A8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80C8F442A065695008FF402 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */,
+				F80C8F4D2A0656EA008FF402 /* APIRequest.swift */,
+				F80C8F4C2A0656EA008FF402 /* APISession.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		F87FBEAE2A06508B009B1A8F = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		F87FBEB92A06508B009B1A8F /* LoginSample */ = {
 			isa = PBXGroup;
 			children = (
+				F80C8F442A065695008FF402 /* Networking */,
 				F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */,
 				F87FBEBC2A06508B009B1A8F /* ContentView.swift */,
 				F87FBEBE2A06508C009B1A8F /* Assets.xcassets */,
@@ -246,7 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87FBEBD2A06508B009B1A8F /* ContentView.swift in Sources */,
+				F80C8F4F2A0656EA008FF402 /* APISession.swift in Sources */,
 				F87FBEBB2A06508B009B1A8F /* LoginSampleApp.swift in Sources */,
+				F80C8F502A0656EA008FF402 /* APIRequest.swift in Sources */,
+				F80C8F4E2A0656EA008FF402 /* APIErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
