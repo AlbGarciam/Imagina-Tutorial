@@ -17,7 +17,7 @@ struct LoginSampleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack { LoginBuilder.build() }
         }
     }
 }

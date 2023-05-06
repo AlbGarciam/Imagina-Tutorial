@@ -1,25 +1,22 @@
 import Foundation
 
 struct ProfileEntity: Decodable {
-    let identifier: String
-    let username: String
+    let identifier: Int
+    let firstName: String
     let avatar: URL
-    let posts: [PostEntity]
     
     enum CodingKeys: String, CodingKey {
-        case identifier
-        case username
-        case avatar
-        case posts
+        case identifier = "id"
+        case firstName
+        case image
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Self.CodingKeys.self)
-        identifier = try container.decode(String.self, forKey: .identifier)
-        username = try container.decode(String.self, forKey: .username)
-        posts = try container.decode([PostEntity].self, forKey: .posts)
+        identifier = try container.decode(Int.self, forKey: .identifier)
+        firstName = try container.decode(String.self, forKey: .firstName)
         
-        let avatarAsString = try container.decode(String.self, forKey: .avatar)
+        let avatarAsString = try container.decode(String.self, forKey: .image)
         guard let avatarAsURL = URL(string: avatarAsString) else {
             throw APIErrorResponse.parseData("")
         }

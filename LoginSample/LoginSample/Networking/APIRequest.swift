@@ -12,7 +12,7 @@ public protocol APIRequest {
     typealias APIRequestCompletion = (APIRequestResponse) -> ()
     
     var method: Methods { get }
-    var body: Any { get }
+    var body: Encodable? { get }
     var baseUrl: String { get }
     var path: String { get }
     var headers: [String:String] { get }
@@ -20,10 +20,10 @@ public protocol APIRequest {
 }
 
 public extension APIRequest {
-    var baseUrl: String { "my-json-server.typicode.com" }
+    var baseUrl: String { "dummyjson.com" }
     var parameters: [String:String] { return [:] }
-    var headers: [String:String] { return ["Accept": "application/json"] }
-    var body: Any { [String: String]() }
+    var headers: [String:String] { return [ "Accept": "application/json", "Content-Type": "application/json" ] }
+    var body: Encodable? { nil }
     
     func getRequest() -> URLRequest {
         // Compose the different parts of a URL
@@ -43,7 +43,9 @@ public extension APIRequest {
         // Create the request
         var request = URLRequest(url: finalURL)
         request.httpMethod = method.rawValue
-        request.httpBody = method != .GET ? try? JSONSerialization.data(withJSONObject: body, options: []) : nil
+        if let body = body, method != .GET {
+            request.httpBody = try? JSONEncoder().encode(body)
+        }
         request.allHTTPHeaderFields = headers
         request.timeoutInterval = 30
         

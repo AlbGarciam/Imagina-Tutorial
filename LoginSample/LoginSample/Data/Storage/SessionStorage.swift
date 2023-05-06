@@ -1,4 +1,3 @@
 struct SessionStorage {
-    static var accessToken: String?
-    static var refreshToken: String?
+    static var token: String?
 }
