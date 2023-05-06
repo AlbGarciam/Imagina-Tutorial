@@ -6,7 +6,7 @@ public enum Methods: String, Codable {
 }
 
 public protocol APIRequest {
-    associatedtype Response: Codable // The way to add a generic into a protocol
+    associatedtype Response: Decodable // The way to add a generic into a protocol
     
     typealias APIRequestResponse = Result<Response, APIErrorResponse>
     typealias APIRequestCompletion = (APIRequestResponse) -> ()
@@ -20,6 +20,7 @@ public protocol APIRequest {
 }
 
 public extension APIRequest {
+    var baseUrl: String { "my-json-server.typicode.com" }
     var parameters: [String:String] { return [:] }
     var headers: [String:String] { return ["Accept": "application/json"] }
     var body: Any { [String: String]() }

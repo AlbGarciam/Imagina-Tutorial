@@ -10,6 +10,14 @@
 		F80C8F4E2A0656EA008FF402 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */; };
 		F80C8F4F2A0656EA008FF402 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4C2A0656EA008FF402 /* APISession.swift */; };
 		F80C8F502A0656EA008FF402 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F4D2A0656EA008FF402 /* APIRequest.swift */; };
+		F80C8F5C2A065CE4008FF402 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F5B2A065CE4008FF402 /* LoginRequest.swift */; };
+		F80C8F602A065DC3008FF402 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F5F2A065DC3008FF402 /* LoginEntity.swift */; };
+		F80C8F622A06605E008FF402 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F612A06605E008FF402 /* GetProfileRequest.swift */; };
+		F80C8F642A06608A008FF402 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F632A06608A008FF402 /* ProfileEntity.swift */; };
+		F80C8F662A066118008FF402 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F652A066118008FF402 /* PostEntity.swift */; };
+		F80C8F6C2A06654A008FF402 /* APIInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F6B2A06654A008FF402 /* APIInterceptor.swift */; };
+		F80C8F6F2A066726008FF402 /* AccessTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F6E2A066726008FF402 /* AccessTokenInterceptor.swift */; };
+		F80C8F722A066771008FF402 /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C8F712A066771008FF402 /* SessionStorage.swift */; };
 		F87FBEBB2A06508B009B1A8F /* LoginSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */; };
 		F87FBEBD2A06508B009B1A8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87FBEBC2A06508B009B1A8F /* ContentView.swift */; };
 		F87FBEBF2A06508C009B1A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87FBEBE2A06508C009B1A8F /* Assets.xcassets */; };
@@ -39,6 +47,14 @@
 		F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
 		F80C8F4C2A0656EA008FF402 /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		F80C8F4D2A0656EA008FF402 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F80C8F5B2A065CE4008FF402 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		F80C8F5F2A065DC3008FF402 /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		F80C8F612A06605E008FF402 /* GetProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileRequest.swift; sourceTree = "<group>"; };
+		F80C8F632A06608A008FF402 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		F80C8F652A066118008FF402 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		F80C8F6B2A06654A008FF402 /* APIInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterceptor.swift; sourceTree = "<group>"; };
+		F80C8F6E2A066726008FF402 /* AccessTokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenInterceptor.swift; sourceTree = "<group>"; };
+		F80C8F712A066771008FF402 /* SessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		F87FBEB72A06508B009B1A8F /* LoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSampleApp.swift; sourceTree = "<group>"; };
 		F87FBEBC2A06508B009B1A8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,8 +97,55 @@
 				F80C8F4B2A0656EA008FF402 /* APIErrorResponse.swift */,
 				F80C8F4D2A0656EA008FF402 /* APIRequest.swift */,
 				F80C8F4C2A0656EA008FF402 /* APISession.swift */,
+				F80C8F6B2A06654A008FF402 /* APIInterceptor.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F80C8F562A065C69008FF402 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F702A06675A008FF402 /* Storage */,
+				F80C8F6D2A066716008FF402 /* Interceptor */,
+				F80C8F5A2A065CCA008FF402 /* Requests */,
+				F80C8F572A065C82008FF402 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F80C8F572A065C82008FF402 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F632A06608A008FF402 /* ProfileEntity.swift */,
+				F80C8F652A066118008FF402 /* PostEntity.swift */,
+				F80C8F5F2A065DC3008FF402 /* LoginEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F80C8F5A2A065CCA008FF402 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F5B2A065CE4008FF402 /* LoginRequest.swift */,
+				F80C8F612A06605E008FF402 /* GetProfileRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		F80C8F6D2A066716008FF402 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F6E2A066726008FF402 /* AccessTokenInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		F80C8F702A06675A008FF402 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F80C8F712A066771008FF402 /* SessionStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		F87FBEAE2A06508B009B1A8F = {
@@ -108,6 +171,7 @@
 		F87FBEB92A06508B009B1A8F /* LoginSample */ = {
 			isa = PBXGroup;
 			children = (
+				F80C8F562A065C69008FF402 /* Data */,
 				F80C8F442A065695008FF402 /* Networking */,
 				F87FBEBA2A06508B009B1A8F /* LoginSampleApp.swift */,
 				F87FBEBC2A06508B009B1A8F /* ContentView.swift */,
@@ -263,9 +327,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87FBEBD2A06508B009B1A8F /* ContentView.swift in Sources */,
+				F80C8F6F2A066726008FF402 /* AccessTokenInterceptor.swift in Sources */,
+				F80C8F662A066118008FF402 /* PostEntity.swift in Sources */,
+				F80C8F6C2A06654A008FF402 /* APIInterceptor.swift in Sources */,
+				F80C8F722A066771008FF402 /* SessionStorage.swift in Sources */,
+				F80C8F642A06608A008FF402 /* ProfileEntity.swift in Sources */,
+				F80C8F602A065DC3008FF402 /* LoginEntity.swift in Sources */,
 				F80C8F4F2A0656EA008FF402 /* APISession.swift in Sources */,
+				F80C8F622A06605E008FF402 /* GetProfileRequest.swift in Sources */,
 				F87FBEBB2A06508B009B1A8F /* LoginSampleApp.swift in Sources */,
 				F80C8F502A0656EA008FF402 /* APIRequest.swift in Sources */,
+				F80C8F5C2A065CE4008FF402 /* LoginRequest.swift in Sources */,
 				F80C8F4E2A0656EA008FF402 /* APIErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
